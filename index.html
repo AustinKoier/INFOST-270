@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Daily Mood Tracker</h1>
+        <div class="entry-form">
+            <label>How are you feeling?</label>
+            <div class="mood-options">
+                <button onclick="setMood('😊')">😊</button>
+                <button onclick="setMood('😐')">😐</button>
+                <button onclick="setMood('😔')">😔</button>
+                <button onclick="setMood('😠')">😠</button>
+            </div>
+            <p id="selected-mood-display">Selected: <span>None</span></p>
+            <textarea id="note" placeholder="Any notes for today?"></textarea>
+            <button id="save-btn" onclick="saveEntry()">Save Entry</button>
+        </div>
+
+        <hr>
+
+        <h2>History</h2>
+        <div id="history-list"></div>
+        <button class="clear-btn" onclick="clearHistory()">Clear All Data</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
